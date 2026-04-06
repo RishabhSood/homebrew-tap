@@ -1,4 +1,4 @@
-class TensorTerm < Formula
+class Tensorterm < Formula
   desc "Cyberpunk terminal dashboard for ML research paper tracking"
   homepage "https://github.com/RishabhSood/TensorTerm"
   url "https://github.com/RishabhSood/TensorTerm/archive/refs/tags/v0.1.0.tar.gz"
