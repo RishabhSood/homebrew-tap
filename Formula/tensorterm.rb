@@ -1,14 +1,21 @@
 class Tensorterm < Formula
   desc "Cyberpunk terminal dashboard for ML research paper tracking"
   homepage "https://github.com/RishabhSood/TensorTerm"
-  url "https://github.com/RishabhSood/TensorTerm/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "8e371bec04ee7f2d29cd9ab41621e2c80f8883669e10f8d3a576f7a0287aebb6"
+  version "0.1.0"
   license "MIT"
 
-  depends_on "rust" => :build
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.0/tensorterm-aarch64-apple-darwin.tar.gz"
+      sha256 "sha256:b3b11b2865105fb658e90bc8ae94667620ba9cf782f738e9896f1d63109c27cc"
+    else
+      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.0/tensorterm-x86_64-apple-darwin.tar.gz"
+      sha256 "sha256:f730bc6b32abac18ecbc225585c5f902e68b2c487dfb8fdad8598baacfe9ff2f"
+    end
+  end
 
   def install
-    system "cargo", "install", *std_cargo_args
+    bin.install "tensorterm"
   end
 
   def caveats
