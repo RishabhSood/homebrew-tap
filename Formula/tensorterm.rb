@@ -7,10 +7,10 @@ class Tensorterm < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.0/tensorterm-aarch64-apple-darwin.tar.gz"
-      sha256 "sha256:b3b11b2865105fb658e90bc8ae94667620ba9cf782f738e9896f1d63109c27cc"
+      sha256 "b3b11b2865105fb658e90bc8ae94667620ba9cf782f738e9896f1d63109c27cc"
     else
       url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.0/tensorterm-x86_64-apple-darwin.tar.gz"
-      sha256 "sha256:f730bc6b32abac18ecbc225585c5f902e68b2c487dfb8fdad8598baacfe9ff2f"
+      sha256 "f730bc6b32abac18ecbc225585c5f902e68b2c487dfb8fdad8598baacfe9ff2f"
     end
   end
 
