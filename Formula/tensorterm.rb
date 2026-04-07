@@ -1,16 +1,16 @@
 class Tensorterm < Formula
   desc "Cyberpunk terminal dashboard for ML research paper tracking"
   homepage "https://github.com/RishabhSood/TensorTerm"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.0/tensorterm-aarch64-apple-darwin.tar.gz"
-      sha256 "b3b11b2865105fb658e90bc8ae94667620ba9cf782f738e9896f1d63109c27cc"
+      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.1/tensorterm-aarch64-apple-darwin.tar.gz"
+      sha256 "464c2103ace0dba17ec216b27d5055921c3ec0034ed986531ad969e3c3976eb0"
     else
-      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.0/tensorterm-x86_64-apple-darwin.tar.gz"
-      sha256 "f730bc6b32abac18ecbc225585c5f902e68b2c487dfb8fdad8598baacfe9ff2f"
+      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.1/tensorterm-x86_64-apple-darwin.tar.gz"
+      sha256 "3b58227b85210976af3f113a307fe3a7975fd6613d83e00c701a0e36084e887c"
     end
   end
 
