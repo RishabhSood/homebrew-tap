@@ -6,14 +6,19 @@ class Tensorterm < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.1/tensorterm-aarch64-apple-darwin.tar.gz"
-      sha256 "de169e88c9a3fecb018c0f3c83b6daa1dff03b270c8c799ddd962ecf740c185e"
+      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.2/tensorterm-aarch64-apple-darwin.tar.gz"
+      sha256 "834ff83e98c684d20a50f6e667f7a90eb833a5e551d4d2f919fec5f9e324918d"
     else
-      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.1/tensorterm-x86_64-apple-darwin.tar.gz"
-      sha256 "a7d43aa909999fce175a5506024ca4a5769e0da331bf12510f474ffaedd45083"
+      url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.2/tensorterm-x86_64-apple-darwin.tar.gz"
+      sha256 "fb1e9f209508af31cc4c1bdd2f2976e33a7645ee579aee608989cf64823d30ea"
     end
   end
 
+  on_linux do
+    url "https://github.com/RishabhSood/TensorTerm/releases/download/v0.1.2/tensorterm-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "445cdaeb59f271e84d771e39d9fd4076c65e065c4457ac2d78839f50aee15b1f"
+  end
+  
   def install
     bin.install "tensorterm"
   end
@@ -29,6 +34,8 @@ class Tensorterm < Formula
       To see the config path:
         tensorterm --config-path
 
+      Press `?` inside the app for the full keybindings overview.
+      
       API keys can be set via environment variables:
         export ANTHROPIC_API_KEY="sk-ant-..."
         export OPENAI_API_KEY="sk-..."
